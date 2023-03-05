@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
                 binding.fragmentContainerView.visibility = View.GONE
                 return@setOnClickListener
             }
+
+            Toast.makeText(this,"main",Toast.LENGTH_LONG).show()
         }
 
         binding.btn.setOnClickListener {
