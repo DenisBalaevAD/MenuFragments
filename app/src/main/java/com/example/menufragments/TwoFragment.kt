@@ -12,8 +12,6 @@ class TwoFragment : Fragment() {
 
     lateinit var binding: FragmentTwoBinding
 
-    var isB = false
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentTwoBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -21,8 +19,9 @@ class TwoFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.btn.setOnClickListener {
-            isB = true
+
+        binding.root.setOnClickListener {
+            Toast.makeText(context,"click 2",Toast.LENGTH_LONG).show()
         }
     }
 }

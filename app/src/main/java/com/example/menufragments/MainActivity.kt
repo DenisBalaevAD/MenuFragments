@@ -55,12 +55,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showPopupMenu() {
-        val popupMenu = PopupMenu(this@MainActivity, binding.fragmentContainerView2)
-        popupMenu.menuInflater.inflate(R.menu.pop, popupMenu.menu)
-        popupMenu.show()
-    }
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(
             R.menu.pop,menu

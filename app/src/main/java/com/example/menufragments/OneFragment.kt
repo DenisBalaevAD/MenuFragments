@@ -26,8 +26,12 @@ class OneFragment : Fragment() {
             val activity = view.context as MainActivity
             activity.binding.fragmentContainerView2.visibility = View.VISIBLE
             activity.supportFragmentManager.beginTransaction()
-                .replace(activity.binding.fragmentContainerView2.id, TwoFragment())
+                .add(activity.binding.fragmentContainerView2.id, TwoFragment())
                 .commit();
+        }
+
+        binding.root.setOnClickListener {
+            Toast.makeText(context,"click",Toast.LENGTH_LONG).show()
         }
     }
 
